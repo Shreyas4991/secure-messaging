@@ -1,0 +1,21 @@
+name = "SecureMessaging"
+defaultTargets = ["SecureMessaging", "ToVCVio"]
+
+[leanOptions]
+pp.unicode.fun = true
+autoImplicit = false
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+maxSynthPendingDepth = 3
+maxRecDepth = 10000
+
+[[require]]
+name = "VCVio"
+git = "https://github.com/Verified-zkEVM/VCV-io"
+rev = "1e984d28302a23d281905f069985fb2919768d8a"
+
+[[lean_lib]]
+name = "ToVCVio"
+
+[[lean_lib]]
+name = "SecureMessaging"
