@@ -78,6 +78,7 @@ Theorem 2], whose proof is constructive. The proof PR for issue #5 will
 replace the existential with a concrete reduction — an explicitly constructed
 IND-CPA adversary — and prove this bound for it.
 -/
+-- ANCHOR: security_reduces_to_ind_cpa_exists
 theorem security_reduces_to_ind_cpa_exists [SampleableType K] [DecidableEq K]
     (kem : KEMScheme ProbComp K PK SK C)
     (hDet : DeterministicDecaps kem)
@@ -88,7 +89,9 @@ theorem security_reduces_to_ind_cpa_exists [SampleableType K] [DecidableEq K]
     (hgp : AdmissibleParams gp) :
     ∃ red : KEMScheme.IND_CPA_Adversary kem,
       CKAScheme.ckaDistAdvantage (scheme kem hDet leak) adv gp ≤
-        KEMScheme.IND_CPA_Advantage (kem := kem) ProbCompRuntime.probComp red := by
+        KEMScheme.IND_CPA_Advantage (kem := kem) ProbCompRuntime.probComp red
+-- ANCHOR_END: security_reduces_to_ind_cpa_exists
+    := by
   sorry
 
 end kemCKA
