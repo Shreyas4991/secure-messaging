@@ -4,6 +4,8 @@ import VersoBlueprint
 import SecureMessagingDocs.Bibliography
 import SecureMessagingDocs.Visuals.GameBoxes
 import SecureMessagingDocs.Visuals.AnchorPill
+import SecureMessagingDocs.Chapters.SecureMessaging.DoubleRatchetAbstract
+import SecureMessagingDocs.Chapters.SecureMessaging.DoubleRatchetSignal
 
 open Verso.Genre
 open Verso.Genre.Manual
@@ -11,7 +13,7 @@ open Informal
 
 set_option doc.verso true
 
-#doc (Manual) "Secure Messaging Definitions" =>
+#doc (Manual) "Double Ratchet SM" =>
 
 *References:*
 
@@ -36,7 +38,7 @@ $`\todo`
 :::leanPill "missing"
 :::
 
-{usesLabel}`uses` {uses "cka"}[] · {uses "fs_aead_scheme"}[] · {uses "prf_prng_scheme"}[] · {githubLabel}`github` {githubIssue 121}[]
+{githubLabel}`github` {githubIssue 161}[]
 ::::
 
 :::defTitle "secure_messaging_double_ratchet_correctness" "Double Ratchet correctness"
@@ -48,7 +50,7 @@ $`\todo`
 :::leanPill "missing"
 :::
 
-{usesLabel}`uses` {uses "secure_messaging_double_ratchet_scheme"}[] · {githubLabel}`github` {githubIssue 121}[]
+{usesLabel}`uses` {uses "secure_messaging_double_ratchet_scheme"}[] · {githubLabel}`github` {githubIssue 162}[]
 ::::
 
 :::defTitle "secure_messaging_double_ratchet_authenticity" "Double Ratchet authenticity"
@@ -60,7 +62,7 @@ $`\todo`
 :::leanPill "missing"
 :::
 
-{usesLabel}`uses` {uses "secure_messaging_double_ratchet_scheme"}[] · {githubLabel}`github` {githubIssue 121}[]
+{usesLabel}`uses` {uses "secure_messaging_double_ratchet_scheme"}[] · {githubLabel}`github` {githubIssue 163}[]
 ::::
 
 :::defTitle "secure_messaging_double_ratchet_privacy" "Double Ratchet privacy"
@@ -72,7 +74,7 @@ $`\todo`
 :::leanPill "missing"
 :::
 
-{usesLabel}`uses` {uses "secure_messaging_double_ratchet_scheme"}[] · {githubLabel}`github` {githubIssue 121}[]
+{usesLabel}`uses` {uses "secure_messaging_double_ratchet_scheme"}[] · {githubLabel}`github` {githubIssue 164}[]
 ::::
 
 :::defTitle "secure_messaging_double_ratchet_security" "Double Ratchet security"
@@ -84,5 +86,9 @@ $`\todo`
 :::leanPill "missing"
 :::
 
-{usesLabel}`uses` {uses "secure_messaging_double_ratchet_scheme"}[] · {uses "secure_messaging_double_ratchet_correctness"}[] · {uses "secure_messaging_double_ratchet_authenticity"}[] · {uses "secure_messaging_double_ratchet_privacy"}[] · {githubLabel}`github` {githubIssue 121}[]
+{usesLabel}`uses` {uses "secure_messaging_double_ratchet_scheme"}[] · {uses "secure_messaging_double_ratchet_correctness"}[] · {uses "secure_messaging_double_ratchet_authenticity"}[] · {uses "secure_messaging_double_ratchet_privacy"}[] · {githubLabel}`github` {githubIssue 165}[]
 ::::
+
+{include 1 SecureMessagingDocs.Chapters.SecureMessaging.DoubleRatchetAbstract}
+
+{include 1 SecureMessagingDocs.Chapters.SecureMessaging.DoubleRatchetSignal}
